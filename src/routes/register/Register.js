@@ -1,9 +1,13 @@
 import {Box, Button, Container, TextField} from "@mui/material";
+import {useNavigate} from "react-router-dom";
 
 function Register() {
+    const navigate = useNavigate();
 
     const handleSubmit = event => {
         event.preventDefault();
+
+        navigate("/login");
     }
 
     return (
@@ -23,7 +27,7 @@ function Register() {
                     <TextField id="confirmedPassword" label="Confirm password" type="password" variant="outlined" fullWidth/>
                 </div>
                 <div>
-                    <Button id="submit" type="submit" variant="contained" size="large" fullWidth>Login</Button>
+                    <Button id="submit" type="submit" variant="contained" size="large" fullWidth>Register</Button>
                 </div>
             </Box>
         </Container>

@@ -1,9 +1,13 @@
 import {Box, Button, Container, TextField} from "@mui/material";
+import {useNavigate} from "react-router-dom";
 
 function NewApplication() {
+    const navigate = useNavigate();
 
     const handleSubmit = event => {
         event.preventDefault();
+
+        navigate("/dashboard");
     }
 
     return (
@@ -29,7 +33,7 @@ function NewApplication() {
                     <TextField id="ownerAccountId" label="Owner Account ID" variant="outlined" fullWidth/>
                 </div>
                 <div>
-                    <Button id="submit" type="submit" variant="contained" size="large" fullWidth>Login</Button>
+                    <Button id="submit" type="submit" variant="contained" size="large" fullWidth>Create application</Button>
                 </div>
             </Box>
         </Container>

@@ -1,9 +1,13 @@
 import {Box, Button, Container, TextField} from "@mui/material";
+import {useNavigate} from "react-router-dom";
 
 function Login() {
+    const navigate = useNavigate();
 
     const handleSubmit = event => {
         event.preventDefault();
+
+        navigate("/dashboard");
     }
 
     return (
